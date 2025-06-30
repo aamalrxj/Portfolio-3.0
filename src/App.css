@@ -1,38 +1,43 @@
-.App {
-  text-align: center;
+.navbar-link {
+  border: 2px solid;
+  border-radius: 2em;
+  padding: 0.35em 1.2em;
+  cursor: pointer;
+  font-weight: 700;
+  font-family: 'Bellota Text', sans-serif;
+  font-size: 1rem;
+  transition: all 0.3s;
+  display: inline-block;
+  background: transparent;
+  text-decoration: none;
+  outline: none;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.navbar-link.home {
+  background: transparent;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.navbar-link.home,
+.navbar-link.home:visited {
+  color: var(--nav-outline-color);
+  border-color: var(--nav-outline-color);
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.navbar-link.home:hover,
+.navbar-link.home.active {
+  background: #FF1744;
+  color: #fff;
+  border-color: #FF1744;
 }
 
-.App-link {
-  color: #61dafb;
+.navbar-link:not(.home) {
+  color: var(--nav-outline-color);
+  border-color: var(--nav-outline-color);
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.navbar-link:not(.home):hover,
+.navbar-link:not(.home).active {
+  background: #FF1744;
+  color: #fff;
+  border-color: #FF1744;
 }
