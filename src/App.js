@@ -1,10 +1,10 @@
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import { HashRouter as Router, Routes, Route } from 'react-router-dom';
 import Layout from './Layout';
 import HomePage from './HomePage';
 import ProjectsPage from './Projects';
 import AboutPage from './About';
 import ContactPage from './Contact';
-import CredentialsPage from './Credentials'; // <-- Add this line
+import CredentialsPage from './Credentials';
 
 export default function App() {
   return (
@@ -15,7 +15,7 @@ export default function App() {
           <Route path="projects" element={<ProjectsPage />} />
           <Route path="about" element={<AboutPage />} />
           <Route path="contact" element={<ContactPage />} />
-          <Route path="credentials" element={<CredentialsPage />} /> {/* New route */}
+          <Route path="credentials" element={<CredentialsPage />} />
         </Route>
       </Routes>
     </Router>

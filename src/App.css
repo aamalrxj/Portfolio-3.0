@@ -41,3 +41,58 @@
   color: #fff;
   border-color: #FF1744;
 }
+
+/* ===========================
+   Mobile Layout Adjustments
+   =========================== */
+@media (max-width: 768px) {
+  /* Main container stacks vertically */
+  .main-container {
+    flex-direction: column !important;
+    padding: 1.2rem 2vw !important;
+    gap: 1.2rem !important;
+    align-items: stretch !important;
+  }
+
+  /* Hide vertical dividers */
+  .divider {
+    display: none !important;
+  }
+
+  /* Sections take full width and stack */
+  .left-section,
+  .right-section,
+  .middle-section {
+    width: 100% !important;
+    margin-top: 1.5rem !important;
+  }
+
+  /* Navigation stacks vertically */
+  nav {
+    flex-direction: column !important;
+    gap: 0.8rem !important;
+    align-items: stretch !important;
+  }
+
+  /* Navbar links fill width for easier tapping */
+  .navbar-link {
+    width: 100% !important;
+    text-align: center;
+    margin-bottom: 0.5rem;
+    font-size: 1.1rem !important;
+  }
+
+  /* Adjust font sizes for readability */
+  h1, h2 {
+    font-size: 1.5rem !important;
+  }
+  p, ul, li {
+    font-size: 1rem !important;
+  }
+
+  /* Buttons fill width for easier tapping */
+  button {
+    width: 100% !important;
+    font-size: 1.1rem !important;
+  }
+}
