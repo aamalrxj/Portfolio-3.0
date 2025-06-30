@@ -43,15 +43,18 @@
 }
 
 /* ===========================
-   Mobile Layout Adjustments
+   Mobile Layout Improvements
    =========================== */
 @media (max-width: 768px) {
-  /* Main container stacks vertically */
+  /* Main container stacks vertically with better padding */
   .main-container {
     flex-direction: column !important;
-    padding: 1.2rem 2vw !important;
-    gap: 1.2rem !important;
+    padding: 2.5rem 3vw 1.2rem 3vw !important;
+    gap: 2rem !important;
     align-items: stretch !important;
+    width: 100vw !important;
+    min-width: 0 !important;
+    box-sizing: border-box;
   }
 
   /* Hide vertical dividers */
@@ -59,40 +62,89 @@
     display: none !important;
   }
 
-  /* Sections take full width and stack */
+  /* Sections take full width and stack, with extra spacing */
   .left-section,
   .right-section,
   .middle-section {
     width: 100% !important;
-    margin-top: 1.5rem !important;
+    margin-top: 0 !important;
+    margin-bottom: 2rem !important;
+    min-width: 0 !important;
+    box-sizing: border-box;
   }
 
-  /* Navigation stacks vertically */
+  /* Navigation bar: stack vertically, center, and add shadow */
   nav {
     flex-direction: column !important;
-    gap: 0.8rem !important;
+    gap: 1rem !important;
     align-items: stretch !important;
+    width: 100% !important;
+    margin-bottom: 1.5rem;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+    background: rgba(255,255,255,0.95);
+    border-radius: 1.2em;
+    padding: 0.5em 0.7em;
   }
 
-  /* Navbar links fill width for easier tapping */
+  /* Navbar links: bigger, bolder, more tappable */
   .navbar-link {
     width: 100% !important;
     text-align: center;
-    margin-bottom: 0.5rem;
-    font-size: 1.1rem !important;
+    margin-bottom: 0.7rem;
+    font-size: 1.18rem !important;
+    padding: 0.65em 0 !important;
+    letter-spacing: 0.5px;
+    border-radius: 2em;
+    box-shadow: 0 1px 4px rgba(0,0,0,0.04);
   }
 
-  /* Adjust font sizes for readability */
-  h1, h2 {
+  /* Remove last margin on navbar link */
+  .navbar-link:last-child {
+    margin-bottom: 0 !important;
+  }
+
+  /* Make headings stand out but not oversized */
+  h1 {
+    font-size: 2.1rem !important;
+    margin-bottom: 1.1rem !important;
+    text-align: left !important;
+    word-break: break-word;
+  }
+  h2 {
     font-size: 1.5rem !important;
-  }
-  p, ul, li {
-    font-size: 1rem !important;
+    margin-bottom: 1rem !important;
+    text-align: left !important;
+    word-break: break-word;
   }
 
-  /* Buttons fill width for easier tapping */
+  /* Body text: comfortable line height and size */
+  p, ul, li {
+    font-size: 1.08rem !important;
+    line-height: 1.7 !important;
+    word-break: break-word;
+  }
+
+  /* Buttons: easy to tap, full width, more spacing */
   button {
     width: 100% !important;
-    font-size: 1.1rem !important;
+    font-size: 1.13rem !important;
+    padding: 0.85em 0 !important;
+    margin-bottom: 1rem !important;
+    border-radius: 2em !important;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.07);
+  }
+
+  /* Make sure images and code boxes fit the screen */
+  img, .code-box, pre, code {
+    max-width: 100% !important;
+    height: auto !important;
+    border-radius: 1em !important;
+    word-break: break-word;
+    overflow-x: auto;
+  }
+
+  /* Hide any unnecessary desktop-only elements */
+  .desktop-only {
+    display: none !important;
   }
 }
