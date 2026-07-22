@@ -38,7 +38,7 @@ export default function Home() {
           </Link>
 
           <a
-            href="https://drive.google.com/file/d/1boDi25IekNTyqVyf_RkScIG2CYCMHdEm/view?usp=sharing"
+            href="https://drive.google.com/file/d/1Yo19P_MpjJ29ovAvG2gmNaFJ3eJEuJhs/view?usp=drive_link"
             target="_blank"
             rel="noreferrer"
             className={`home-btn ${lightMode ? "light" : "dark"}`}
